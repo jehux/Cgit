@@ -1,0 +1,65 @@
+<?php
+required_once("./php/myDBC.php");
+if(isset($_SESSION['session']))
+{
+    header("location:principal.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link type="text/css" href="./css/style.css" rel="stylesheet" />
+</head>
+ 
+<body>
+ 
+   
+ 
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera" >
+                <img src="./css/images/logo.jpg">
+            </div>
+ 
+            <div id="cuerpo">
+                <form id="form-login" action="" method="post" autocomplete="off">
+                    <!--A saber, el atributo for funciona como el id.-->
+                    <!--ejemplo <label for="usuario">Usuario:</label>-->
+                    <!--required es nuevo en html5, si el campo está vacío te avisa, pero cuidado, no valida la información-->
+                    <p><label >Usuario:</label></p>
+                        <input name="usuario" type="text" id="usuario" placeholder="Ingresa Usuario" autofocus="" required=""></p>
+ 
+                    <p><label>Contraseña:</label></p>
+                        <input name="contrasenia" type="password" id="contrasenia" placeholder="Ingresa Password" required=""></p>
+                    <p><label >Direccion:</label></p>
+ 						 <input dir="Direccion" type="Dress" id="Direccion" placeholder="Ingresa Direccion" required=""></p>
+
+ 					<p><label >Edad:</label></p>
+ 						 <input eda="edad" type="number" id="edad" placeholder="Ingresa edad" required="" max="100" min="0" value="0" step="1"></p>
+
+ 					<p><label >Edad2:</label></p>
+ 						 <input eda2="edad2" type="int" id="edad2" placeholder="Ingresa edad" required=""></p>
+ 					<p><label >Fecha1:</label></p>
+ 						 <input fech="Fecha1" type="month" id="Fecha1" placeholder="Ingresa fecha" required=""></p>
+ 					<p><label >Fecha2:</label></p>
+ 						 <input fech2="Fecha2" type="week" id="Fecha2" placeholder="Ingresa fecha" required=""></p>
+ 					<p><label >Fecha3:</label></p>
+ 						 <input fech2="Fecha2" type="date" id="Fecha2" placeholder="Ingresa fecha" required=""></p>
+ 					<p><label >Hora1:</label></p>
+ 						 <input H="Hora1" type="time" id="Hora1" placeholder="Ingresa hora" required=""></p>
+
+                    <p id="bot"><input type="submit" id="submit" name="submit" value="Ingresar" class="boton"></p>
+
+                </form>
+            </div><!--fin cuerpo-->
+ 
+            <div id="pie">8/03/2018</div>
+        </div><!-- fin contenedor -->
+    </div><!--fin envoltura-->
+</body>
+ 
+</html>
